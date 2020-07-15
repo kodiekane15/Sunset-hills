@@ -64,83 +64,107 @@
 
 <body>
 	<div class="welcome_Wrap">
-	<!-- Navigation -->
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
-		<div class="container">
-			<a class="navbar-brand" href="/Index.html">Sunset Hills</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarResponsive">
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item">
-						<a class="nav-link" href="/Index.html">
-							Home
-						</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link active" href="/Solve.html">Solve</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="/Code.html">Code</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="//github.com/kodiekane15/Sunset-hills">Git</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="//kodiekane.netlify.app/">Portfolio</a>
-					</li>
-					<li class="nav-item">
-						<div class="dropdown">
-							<a class="dropdown-toggle nav-link" data-toggle="dropdown">Mini Projects</a>
-							<div class="dropdown-menu bgColor">
-								<div class="dropdown-content">
-									<a href="//kodiekane-sumofallfear.netlify.app/" class="dropdown-item nav-link">Sum of All Fears</a>
-									<a href="//kodiekane-fizzbuzz.netlify.app/" class="dropdown-item nav-item nav-link">Fizz-Buzz</a>
-									<a href="//kodiekane-tacocat.netlify.app/" class="dropdown-item nav-item nav-link">Taco Cat</a>
+		<!-- Navigation -->
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+			<div class="container">
+				<a class="navbar-brand" href="/Index.html">Sunset Hills</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarResponsive">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="/Index.html">
+								Home
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" href="/Solve.html">Solve</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/Code.html">Code</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="//github.com/kodiekane15/Sunset-hills" target="_blank">Git</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="//kodiekane.netlify.app/" target="_blank">Portfolio</a>
+						</li>
+						<li class="nav-item">
+							<div class="dropdown">
+								<a class="dropdown-toggle nav-link" data-toggle="dropdown">Mini Projects</a>
+								<div class="dropdown-menu bgColor">
+									<div class="dropdown-content">
+										<a href="//kodiekane-sumofallfear.netlify.app/" class="dropdown-item nav-link">Sum of All Fears</a>
+										<a href="//kodiekane-fizzbuzz.netlify.app/" class="dropdown-item nav-item nav-link">Fizz-Buzz</a>
+										<a href="//kodiekane-tacocat.netlify.app/" class="dropdown-item nav-item nav-link">Taco Cat</a>
+									</div>
 								</div>
 							</div>
-						</div>
-					</li>
-				</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Page Content -->
+		<div class="container textColor">
+			<div class="row elWide">
+				<p>Please select a number between 1 and 10 for each input</p>
+			</div>
+			<div class="row">
+
+				<div class="col"><input id="sunsetIn1" max="10" class="form-control sunsetIn btn-outline-success" placeholder="Number 1" /></div>
+				<div class="col"><input id="sunsetIn2" max="10" class="form-control sunsetIn btn-outline-success" placeholder="Number 2" /></div>
+				<div class="col"><input id="sunsetIn3" max="10" class="form-control sunsetIn btn-outline-success" placeholder="Number 3" /></div>
+				<div class="col"><input id="sunsetIn4" max="10" class="form-control sunsetIn btn-outline-success" placeholder="Number 4" /></div>
+				<div class="col"><input id="sunsetIn5" max="10" class="form-control sunsetIn btn-outline-success" placeholder="Number 5" /></div>
+				<div class="col"><input id="sunsetIn6" max="10" class="form-control sunsetIn btn-outline-success" placeholder="Number 6" /></div>
+
+
+			</div>
+			<div class="row">
+				<div class="col">
+					<button id="btnSunset" class="btn btn-dark elWide btn-outline-success">Calculate</button>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col">
+					<p id="sunsetOut"></p>
+					<p id="errorMsg"></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-6">
+					<button id="btnClear" class="btn btn-success elWide">Clear</button>
+				</div>
 			</div>
 		</div>
-	</nav>
-
-	<!-- Page Content -->
-	<div class="container textColor">
-		<div class="row">
-			<div class="col"><input id="sunsetIn1" class="form-control sunsetIn btn-outline-success" placeholder="Number 1" /></div>
-			<div class="col"><input id="sunsetIn2" class="form-control sunsetIn btn-outline-success" placeholder="Number 2" /></div>
-			<div class="col"><input id="sunsetIn3" class="form-control sunsetIn btn-outline-success" placeholder="Number 3" /></div>
-			<div class="col"><input id="sunsetIn4" class="form-control sunsetIn btn-outline-success" placeholder="Number 4" /></div>
-			<div class="col"><input id="sunsetIn5" class="form-control sunsetIn btn-outline-success" placeholder="Number 5" /></div>
-			<div class="col"><input id="sunsetIn6" class="form-control sunsetIn btn-outline-success" placeholder="Number 6" /></div>
-
-
-		</div>
-		<div class="row">
-			<div class="col">
-				<button id="btnSunset" class="btn btn-dark elWide btn-outline-success">Calculate</button>
-			</div>
-		</div>
-		<hr />
-		<div class="row">
-			<div class="col">
-				<p id="sunsetOut"></p>
-			</div>
-		</div>
+		<!--<img id="img1" src="img/bar1.png" />
+		<img id="img2" src="img/bar2.png" />
+		<img id="img3" src="img/Bar3.png" />
+		<img id="img4" src="img/bar4.png" />
+		<img id="img5" src="img/bar5.png" />
+		<img id="img6" src="img/bar6.png" />
+		<img id="img7" src="img/bar7.png" />
+		<img id="img8" src="img/bar8.jpg" />
+		<img id="img9" src="img/bar9_LI.jpg" />
+		<img id="img10" src="img/bar 10_LI.jpg" />-->
 	</div>
-	</div>
+
 	<!-- Bootstrap core JavaScript -->
 	<script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 	<script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 	<script src="SCRIPTS/prism.js"></script>
-	
+
 	<script>
+		
+		$("#btnClear").hide();
 		//Step 1: Click event handler
 		$("#btnSunset").on("click", function () {
+			$("#btnClear").show();
 			//Step 2: Get the user Data
 			let blgd1 = parseInt($("#sunsetIn1").val()); //3
 			let blgd2 = parseInt($("#sunsetIn2").val()); //2
@@ -149,13 +173,62 @@
 			let blgd5 = parseInt($("#sunsetIn5").val()); //6
 			let blgd6 = parseInt($("#sunsetIn6").val()); //9
 
+			if (blgd1 > 10) {
+				$("#btnSunset").hide();
+				return $("#errorMsg").text(`You messed up! ${blgd1} is not between 1 and 10. Please hit clear and pick a number between 1 and 10`)
+			}
+			if (blgd2 > 10) {
+				$("#btnSunset").hide();
+				return $("#errorMsg").text(`You messed up! ${blgd2} is not between 1 and 10. Please hit clear and pick a number between 1 and 10`)
+			}
+			if (blgd3 > 10) {
+				$("#btnSunset").hide();
+				return $("#errorMsg").text(`You messed up! ${blgd3} is not between 1 and 10. Please hit clear and pick a number between 1 and 10`)
+			}
+			if (blgd4 > 10) {
+				$("#btnSunset").hide();
+				return $("#errorMsg").text(`You messed up! ${blgd4} is not between 1 and 10. Please hit clear and pick a number between 1 and 10`)
+			}
+			if (blgd5 > 10) {
+				$("#btnSunset").hide();
+				return $("#errorMsg").text(`You messed up! ${blgd5} is not between 1 and 10. Please hit clear and pick a number between 1 and 10`)
+			}
+			if (blgd6 > 10) {
+				$("#btnSunset").hide();
+				return $("#errorMsg").text(`You messed up! ${blgd6} is not between 1 and 10. Please hit clear and pick a number between 1 and 10`)
+			}
+
+			//if (blgd1 || blgd2 || blgd3 || blgd4 || blgd5 || blgd6 == 1) {				
+			//}
+			//if (blgd1 || blgd2 || blgd3 || blgd4 || blgd5 || blgd6 == 2) {
+			//}
+			//if (blgd1 || blgd2 || blgd3 || blgd4 || blgd5 || blgd6 == 3) {
+			//}
+			//if (blgd1 || blgd2 || blgd3 || blgd4 || blgd5 || blgd6 == 4) {
+			//}
+			//if (blgd1 || blgd2 || blgd3 || blgd4 || blgd5 || blgd6 == 5) {
+			//}
+			//if (blgd1 || blgd2 || blgd3 || blgd4 || blgd5 || blgd6 == 6) {
+			//}
+			//if (blgd1 || blgd2 || blgd3 || blgd4 || blgd5 || blgd6 == 7) {
+			//}
+			//if (blgd1 || blgd2 || blgd3 || blgd4 || blgd5 || blgd6 == 8) {
+			//}
+			//if (blgd1 || blgd2 || blgd3 || blgd4 || blgd5 || blgd6 == 9) {
+			//}
+			//if (blgd1 || blgd2 || blgd3 || blgd4 || blgd5 || blgd6 == 10) {
+			//}
+
+
+
+
 			//Step 3: Preform the algorithm
 			// Build an array from the user input
 			let bldgArray = [blgd1, blgd2, blgd3, blgd4, blgd5, blgd6];
 
 			// I know that the left most building will always see the sunset so i will preload an output array with that building
 			let output = new Array();
-			//let output = [bldg1]			
+			//let output = [bldg1]
 			let tallest = 0;
 			let currentBldg = 0
 			for (let loop = 0; loop <= 5; loop++) {
@@ -171,7 +244,20 @@
 			$("#sunsetOut").html(`Given the input, <span class="bldgCount">${output.length}</span> building(s) can see the sunset. <br /> The Buildings that can see the sunset are <span class="bldgCount">[${output.toString()}]</span>`);
 
 
-		});	
+		});
+
+		$("#btnClear").on("click", function () {
+			$("#sunsetIn1").val("");
+			$("#sunsetIn2").val("");
+			$("#sunsetIn3").val("");
+			$("#sunsetIn4").val("");
+			$("#sunsetIn5").val("");
+			$("#sunsetIn6").val("");
+			$("#errorMsg").text("");
+			$("#sunsetOut").text("");
+			$("#btnClear").hide();
+			$("#btnSunset").show();
+		})
 
 
 	</script>
