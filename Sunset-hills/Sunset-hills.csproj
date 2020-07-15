@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="Code.html" />
     <Content Include="CSS\prism.css" />
+    <Content Include="favicon.ico" />
     <Content Include="img\bar 10_LI.jpg" />
     <Content Include="img\bar1.png" />
     <Content Include="img\bar2.png" />
