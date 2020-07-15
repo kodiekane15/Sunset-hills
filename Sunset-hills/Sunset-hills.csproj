@@ -69,6 +69,17 @@
   <ItemGroup>
     <Content Include="Code.html" />
     <Content Include="CSS\prism.css" />
+    <Content Include="img\bar 10_LI.jpg" />
+    <Content Include="img\bar1.png" />
+    <Content Include="img\bar2.png" />
+    <Content Include="img\Bar3.png" />
+    <Content Include="img\bar4.png" />
+    <Content Include="img\bar5.png" />
+    <Content Include="img\bar6.png" />
+    <Content Include="img\bar7.png" />
+    <Content Include="img\bar8.jpg" />
+    <Content Include="img\bar9_LI.jpg" />
+    <Content Include="img\wlc-bg1.jpg" />
     <Content Include="Index.html" />
     <Content Include="SCRIPTS\prism.js" />
     <Content Include="Solve.html" />
@@ -87,6 +98,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
