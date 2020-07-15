@@ -7,11 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-	<link rel="icon" href="favicon.ico" type="image/x-icon" />
+
     <title>Kodie's Sunset Hills</title>
-    
+
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link href="CSS/prism.css" rel="stylesheet" />
     <style>
         .elWide {
             width: 100%;
@@ -22,7 +24,7 @@
             background-image: url('img/wlc-bg1.jpg');
             /* The image used */
             /* Full height */
-            height: 100vh;
+            height: 100%;
             /* Center and scale the image nicely */
             background-position: center;
             background-repeat: no-repeat;
@@ -94,21 +96,94 @@
         <div class="container textColor">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h1 class="mt-5">This Page shows your JS code</h1>
-                    <p class="lead">You need to use a Syntax Highlighter - Prism.js is default</p>
-                    <ul class="list-unstyled">
-                        <li>Code with highlighter</li>
-                        <li>Will display on this page</li>
-                    </ul>
+                    <h1 class="mt-5">This is the code I used!</h1>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-9">
+<pre><code class="language-js">
+    $("#btnClear").hide();
+    //Step 1: Click event handler
+    $("#btnSunset").on("click", function () {
+    $("#btnClear").show();
+    //Step 2: Get the user Data
+    let blgd1 = parseInt($("#sunsetIn1").val()); //3
+    let blgd2 = parseInt($("#sunsetIn2").val()); //2
+    let blgd3 = parseInt($("#sunsetIn3").val()); //4
+    let blgd4 = parseInt($("#sunsetIn4").val()); //7
+    let blgd5 = parseInt($("#sunsetIn5").val()); //6
+    let blgd6 = parseInt($("#sunsetIn6").val()); //9
+
+    if (blgd1 > 10) {
+    $("#btnSunset").hide();
+    return $("#errorMsg").text(`You messed up! ${blgd1} is not between 1 and 10. Please hit clear and pick a number between 1 and 10`)
+    }
+    if (blgd2 > 10) {
+    $("#btnSunset").hide();
+    return $("#errorMsg").text(`You messed up! ${blgd2} is not between 1 and 10. Please hit clear and pick a number between 1 and 10`)
+    }
+    if (blgd3 > 10) {
+    $("#btnSunset").hide();
+    return $("#errorMsg").text(`You messed up! ${blgd3} is not between 1 and 10. Please hit clear and pick a number between 1 and 10`)
+    }
+    if (blgd4 > 10) {
+    $("#btnSunset").hide();
+    return $("#errorMsg").text(`You messed up! ${blgd4} is not between 1 and 10. Please hit clear and pick a number between 1 and 10`)
+    }
+    if (blgd5 > 10) {
+    $("#btnSunset").hide();
+    return $("#errorMsg").text(`You messed up! ${blgd5} is not between 1 and 10. Please hit clear and pick a number between 1 and 10`)
+    }
+    if (blgd6 > 10) {
+    $("#btnSunset").hide();
+    return $("#errorMsg").text(`You messed up! ${blgd6} is not between 1 and 10. Please hit clear and pick a number between 1 and 10`)
+    }
+    //Step 3: Preform the algorithm
+    // Build an array from the user input
+    let bldgArray = [blgd1, blgd2, blgd3, blgd4, blgd5, blgd6];
+    // I know that the left most building will always see the sunset so i will preload an output array with that building
+    let output = new Array();
+    //let output = [bldg1]
+    let tallest = 0;
+    let currentBldg = 0
+    for (let loop = 0; loop <= 5; loop++) {
+    currentBldg = bldgArray[loop];
+    // Basically I need to determine if the integer I am on is smaller than any before me
+    if (currentBldg > tallest) {
+    output.push(currentBldg);
+    tallest = currentBldg;
+    }
+    }
+    //Step 4: output to user
+    $("#sunsetOut").html(`Given the input, <span class="bldgCount">${output.length}</span> building(s) can see the sunset.
+    <br /> The Buildings that can see the sunset are <span class="bldgCount">[${output.toString()}]</span>`);
+    });
+
+    $("#btnClear").on("click", function () {
+    $("#sunsetIn1").val("");
+    $("#sunsetIn2").val("");
+    $("#sunsetIn3").val("");
+    $("#sunsetIn4").val("");
+    $("#sunsetIn5").val("");
+    $("#sunsetIn6").val("");
+    $("#errorMsg").text("");
+    $("#sunsetOut").text("");
+    $("#btnClear").hide();
+    $("#btnSunset").show();
+    })
+</code></pre>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+
         </div>
     </div>
     <!-- Bootstrap core JavaScript -->
     <script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-
+    <script src="SCRIPTS/prism.js"></script>
 </body>
 
 </html>
