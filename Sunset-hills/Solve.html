@@ -68,7 +68,7 @@
 		<!-- Navigation -->
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
 			<div class="container">
-				<a class="navbar-brand" href="/Index.html">Sunset Hills</a>
+				<a class="navbar-brand" href="/Index.html">Sunset Hills Mini-Project</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
@@ -111,16 +111,17 @@
 		<!-- Page Content -->
 		<div class="container textColor">
 			<div class="row elWide">
+				<h1>Sunset Hills</h1>
 				<p>Please select a number between 1 and 10 for each input</p>
 			</div>
 			<div class="row">
 
-				<div class="col"><input id="sunsetIn1" max="10" class="form-control sunsetIn btn-outline-success" placeholder="Number 1" /></div>
-				<div class="col"><input id="sunsetIn2" max="10" class="form-control sunsetIn btn-outline-success" placeholder="Number 2" /></div>
-				<div class="col"><input id="sunsetIn3" max="10" class="form-control sunsetIn btn-outline-success" placeholder="Number 3" /></div>
-				<div class="col"><input id="sunsetIn4" max="10" class="form-control sunsetIn btn-outline-success" placeholder="Number 4" /></div>
-				<div class="col"><input id="sunsetIn5" max="10" class="form-control sunsetIn btn-outline-success" placeholder="Number 5" /></div>
-				<div class="col"><input id="sunsetIn6" max="10" class="form-control sunsetIn btn-outline-success" placeholder="Number 6" /></div>
+				<div class="col"><input id="sunsetIn1" class="form-control sunsetIn btn-outline-success" placeholder="Number 1" /></div>
+				<div class="col"><input id="sunsetIn2" class="form-control sunsetIn btn-outline-success" placeholder="Number 2" /></div>
+				<div class="col"><input id="sunsetIn3" class="form-control sunsetIn btn-outline-success" placeholder="Number 3" /></div>
+				<div class="col"><input id="sunsetIn4" class="form-control sunsetIn btn-outline-success" placeholder="Number 4" /></div>
+				<div class="col"><input id="sunsetIn5" class="form-control sunsetIn btn-outline-success" placeholder="Number 5" /></div>
+				<div class="col"><input id="sunsetIn6" class="form-control sunsetIn btn-outline-success" placeholder="Number 6" /></div>
 
 
 			</div>
@@ -141,17 +142,20 @@
 					<button id="btnClear" class="btn btn-success elWide">Clear</button>
 				</div>
 			</div>
+			<div class="row">
+				<div id="img1" class="col"></div>
+				<div id="img2" class="col"></div>
+				<div id="img3" class="col"></div>
+				<div id="img4" class="col"></div>
+				<div id="img5" class="col"></div>
+				<div id="img6" class="col"></div>
+				<div id="img7" class="col"></div>
+				<div id="img8" class="col"></div>
+				<div id="img9" class="col"></div>
+				<div id="img10" class="col"></div>
+			</div>
 		</div>
-		<!--<img id="img1" src="img/bar1.png" />
-		<img id="img2" src="img/bar2.png" />
-		<img id="img3" src="img/Bar3.png" />
-		<img id="img4" src="img/bar4.png" />
-		<img id="img5" src="img/bar5.png" />
-		<img id="img6" src="img/bar6.png" />
-		<img id="img7" src="img/bar7.png" />
-		<img id="img8" src="img/bar8.jpg" />
-		<img id="img9" src="img/bar9_LI.jpg" />
-		<img id="img10" src="img/bar 10_LI.jpg" />-->
+
 	</div>
 
 	<!-- Bootstrap core JavaScript -->
@@ -199,26 +203,36 @@
 				return $("#errorMsg").text(`You messed up! ${blgd6} is not between 1 and 10. Please hit clear and pick a number between 1 and 10`)
 			}
 
-			//if (blgd1 || blgd2 || blgd3 || blgd4 || blgd5 || blgd6 == 1) {				
-			//}
-			//if (blgd1 || blgd2 || blgd3 || blgd4 || blgd5 || blgd6 == 2) {
-			//}
-			//if (blgd1 || blgd2 || blgd3 || blgd4 || blgd5 || blgd6 == 3) {
-			//}
-			//if (blgd1 || blgd2 || blgd3 || blgd4 || blgd5 || blgd6 == 4) {
-			//}
-			//if (blgd1 || blgd2 || blgd3 || blgd4 || blgd5 || blgd6 == 5) {
-			//}
-			//if (blgd1 || blgd2 || blgd3 || blgd4 || blgd5 || blgd6 == 6) {
-			//}
-			//if (blgd1 || blgd2 || blgd3 || blgd4 || blgd5 || blgd6 == 7) {
-			//}
-			//if (blgd1 || blgd2 || blgd3 || blgd4 || blgd5 || blgd6 == 8) {
-			//}
-			//if (blgd1 || blgd2 || blgd3 || blgd4 || blgd5 || blgd6 == 9) {
-			//}
-			//if (blgd1 || blgd2 || blgd3 || blgd4 || blgd5 || blgd6 == 10) {
-			//}
+			//if (blgd1 || blgd2 || blgd3 || blgd4 || blgd5 || blgd6 == 1){
+			//	$("#img1").html(`<img src="img/bar1.png" />`)
+			//};
+			//if (blgd1 || blgd2 || blgd3 || blgd4 || blgd5 || blgd6 == 2){
+			//	$("#img2").html(`<img src="img/bar2.png" />`)
+			//};
+			//if (blgd1 || blgd2 || blgd3 || blgd4 || blgd5 || blgd6 == 3){
+			//	$("#img3").html(`<img src="img/bar3.png" />`)
+			//};
+			//if (blgd1 || blgd2 || blgd3 || blgd4 || blgd5 || blgd6 == 4){
+			//	$("#img4").html(`<img src="img/bar4.png" />`)
+			//};
+			//if (blgd1 || blgd2 || blgd3 || blgd4 || blgd5 || blgd6 == 5){
+			//	$("#img5")/html(`<img src="img/bar5.png" />`)
+			//};
+			//if (blgd1 || blgd2 || blgd3 || blgd4 || blgd5 || blgd6 == 6){
+			//	$("#img6").html(`<img src="img/bar6.png" />`)
+			//};
+			//if (blgd1 || blgd2 || blgd3 || blgd4 || blgd5 || blgd6 == 7){
+			//	$("#img7").html(`<img src="img/bar7.png" />`)
+			//};
+			//if (blgd1 || blgd2 || blgd3 || blgd4 || blgd5 || blgd6 == 8){
+			//	$("#img8").html(`<img src="img/bar8.png" />`)
+			//};
+			//if (blgd1 || blgd2 || blgd3 || blgd4 || blgd5 || blgd6 == 9){
+			//	$("#img9").html(`<img src="img/bar9_LI.jpg" />`)
+			//};
+			//if (blgd1 || blgd2 || blgd3 || blgd4 || blgd5 || blgd6 == 10){
+			//	$("#img10").html(`<img src="img/bar10_LI.jpg" />`)
+			//};
 
 
 
