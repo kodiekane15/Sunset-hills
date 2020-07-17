@@ -264,14 +264,8 @@
 		});
 
 		$("#btnClear").on("click", function () {
-			$("#sunsetIn1").val("");
-			$("#sunsetIn2").val("");
-			$("#sunsetIn3").val("");
-			$("#sunsetIn4").val("");
-			$("#sunsetIn5").val("");
-			$("#sunsetIn6").val("");
-			$("#errorMsg").text("");
-			$("#sunsetOut").text("");
+			$("#sunsetIn1, #sunsetIn2, #sunsetIn3, #sunsetIn4, #sunsetIn5, #sunsetIn6").val("");
+			$("#errorMsg, #sunsetOut").text("");
 			$("#btnClear").hide();
 			$("#btnSunset").show();
 		})

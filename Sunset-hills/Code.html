@@ -112,31 +112,24 @@
     let blgd4 = parseInt($("#sunsetIn4").val()); //7
     let blgd5 = parseInt($("#sunsetIn5").val()); //6
     let blgd6 = parseInt($("#sunsetIn6").val()); //9
-
     if (blgd1 > 10) {
     $("#btnSunset").hide();
-    return $("#errorMsg").text(`You messed up! ${blgd1} is not between 1 and 10. Please hit clear and pick a number between 1 and 10`)
-    }
+    return $("#errorMsg").text(`You messed up! ${blgd1} is not between 1 and 10. Please hit clear and pick a number between 1 and 10`)}
     if (blgd2 > 10) {
     $("#btnSunset").hide();
-    return $("#errorMsg").text(`You messed up! ${blgd2} is not between 1 and 10. Please hit clear and pick a number between 1 and 10`)
-    }
+    return $("#errorMsg").text(`You messed up! ${blgd2} is not between 1 and 10. Please hit clear and pick a number between 1 and 10`)}
     if (blgd3 > 10) {
     $("#btnSunset").hide();
-    return $("#errorMsg").text(`You messed up! ${blgd3} is not between 1 and 10. Please hit clear and pick a number between 1 and 10`)
-    }
+    return $("#errorMsg").text(`You messed up! ${blgd3} is not between 1 and 10. Please hit clear and pick a number between 1 and 10`)}
     if (blgd4 > 10) {
     $("#btnSunset").hide();
-    return $("#errorMsg").text(`You messed up! ${blgd4} is not between 1 and 10. Please hit clear and pick a number between 1 and 10`)
-    }
+    return $("#errorMsg").text(`You messed up! ${blgd4} is not between 1 and 10. Please hit clear and pick a number between 1 and 10`)}
     if (blgd5 > 10) {
     $("#btnSunset").hide();
-    return $("#errorMsg").text(`You messed up! ${blgd5} is not between 1 and 10. Please hit clear and pick a number between 1 and 10`)
-    }
+    return $("#errorMsg").text(`You messed up! ${blgd5} is not between 1 and 10. Please hit clear and pick a number between 1 and 10`)}
     if (blgd6 > 10) {
     $("#btnSunset").hide();
-    return $("#errorMsg").text(`You messed up! ${blgd6} is not between 1 and 10. Please hit clear and pick a number between 1 and 10`)
-    }
+    return $("#errorMsg").text(`You messed up! ${blgd6} is not between 1 and 10. Please hit clear and pick a number between 1 and 10`)}
     //Step 3: Preform the algorithm
     // Build an array from the user input
     let bldgArray = [blgd1, blgd2, blgd3, blgd4, blgd5, blgd6];
@@ -150,26 +143,18 @@
     // Basically I need to determine if the integer I am on is smaller than any before me
     if (currentBldg > tallest) {
     output.push(currentBldg);
-    tallest = currentBldg;
-    }
+    tallest = currentBldg;}
     }
     //Step 4: output to user
     $("#sunsetOut").html(`Given the input, <span class="bldgCount">${output.length}</span> building(s) can see the sunset.
     <br /> The Buildings that can see the sunset are <span class="bldgCount">[${output.toString()}]</span>`);
     });
-
     $("#btnClear").on("click", function () {
-    $("#sunsetIn1").val("");
-    $("#sunsetIn2").val("");
-    $("#sunsetIn3").val("");
-    $("#sunsetIn4").val("");
-    $("#sunsetIn5").val("");
-    $("#sunsetIn6").val("");
-    $("#errorMsg").text("");
-    $("#sunsetOut").text("");
+    $("#sunsetIn1, #sunsetIn2, #sunsetIn3, #sunsetIn4, #sunsetIn5, #sunsetIn6").val("");
+    $("#errorMsg, #sunsetOut").text("");
     $("#btnClear").hide();
     $("#btnSunset").show();
-    })
+    });
 </code></pre>
                             </div>
                         </div>
